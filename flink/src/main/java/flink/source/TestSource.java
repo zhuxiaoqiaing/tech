@@ -12,4 +12,7 @@ public class TestSource {
     public static void test1(){
         System.out.println("test1");
     }
+    public static void test2(){
+
+    }
 }
