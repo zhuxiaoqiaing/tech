@@ -9,4 +9,7 @@ public class TestSource {
     {
         System.out.println("master source....");
     }
+    public static void test(){
+        System.out.println("test");
+    }
 }
