@@ -11,6 +11,7 @@
     <modules>
         <module>kafka</module>
         <module>flink</module>
+        <module>spark</module>
     </modules>
     <dependencies>
         <dependency>

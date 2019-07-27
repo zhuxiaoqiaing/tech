@@ -19,10 +19,17 @@ public class TestProducer {
         return props;
     }
     public static void main(String[] args) {
-        final String TOPIC_NAME = "my-topic2";
+        final String TOPIC_NAME = "sparkstream_test";
         Producer<String, String> producer = new KafkaProducer(getPropertiesForKafka());
+        System.out.println("start producing topic....");
         int i = 0;
-        while (i<1000) {
+        while (i<10000) {
+            try {
+                Thread.sleep(1000);
+            }
+            catch(Exception e){
+                //
+            }
             producer.send(new ProducerRecord<String, String>(TOPIC_NAME, i + "", i + ""));
             i += 1;
         }
