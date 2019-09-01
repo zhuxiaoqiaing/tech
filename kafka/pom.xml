@@ -17,7 +17,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>kafka.producer.TestProducer</mainClass>
+                            <mainClass>org.zxx.kafka.examples.TestProducer</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

@@ -1,9 +1,10 @@
-package kafka.producer;
+package org.zxx.kafka.examples;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 
 import java.util.Properties;
+
 /**
  * Author: zhuxiaoxiang
  * Date: 2019/7/14 12:25
@@ -19,18 +20,19 @@ public class TestProducer {
         return props;
     }
     public static void main(String[] args) {
-        final String TOPIC_NAME = "sparkstream_test";
+        final String TOPIC_NAME = "flink_mysql_person";
         Producer<String, String> producer = new KafkaProducer(getPropertiesForKafka());
         System.out.println("start producing topic....");
         int i = 0;
-        while (i<10000) {
-            try {
-                Thread.sleep(1000);
-            }
-            catch(Exception e){
+        while (i<100000) {
+            //try {
+              //  Thread.sleep(100);
+            //}
+            //catch(Exception e){
                 //
-            }
-            producer.send(new ProducerRecord<String, String>(TOPIC_NAME, i + "", i + ""));
+            //}
+            String []names={"i","am","a","student"};
+            producer.send(new ProducerRecord<String, String>(TOPIC_NAME, i + "", names[i%4] + ""));
             i += 1;
         }
         producer.close();
