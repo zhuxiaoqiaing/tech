@@ -2,9 +2,7 @@ package org.zxx.kafka.examples;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
-
 import java.util.Properties;
-
 /**
  * Author: zhuxiaoxiang
  * Date: 2019/7/14 12:25
